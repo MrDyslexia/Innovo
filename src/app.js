@@ -1,5 +1,4 @@
 import express from "express";
-import indexRoutes from "./routes/index.routes";
 import morgan from "morgan";
 import authRoutes from './routes/auth.routes.js'
 

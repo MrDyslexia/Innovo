@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const lectoSchema=new mongoose.Schema({
+const trabajadorSchema=new mongoose.Schema({
     rut:{ 
         type:String,
         require:true,
@@ -11,7 +11,8 @@ const lectoSchema=new mongoose.Schema({
         require:true,
     },
     idsectores:{
-        type:[Object],
+        type:mongoose.Types.ObjectId,
+        ref:'Sector',
         require:false
     },
     nombre:{
@@ -20,7 +21,9 @@ const lectoSchema=new mongoose.Schema({
         trim:true
     },
     cargo:{
-        type:Boolean,
+        type:String,
+        enum:['Lector','Inspector','Administrador'],
+        default:'Lector',
         require:true,
     },
     imgURL:{
@@ -34,4 +37,4 @@ const lectoSchema=new mongoose.Schema({
 },{
     timestamps:true
 })
-export default mongoose.model('Lector',lectoSchema);
+export default mongoose.model('Trabajador',trabajadorSchema);

@@ -6,9 +6,7 @@ const rutaSchema=new mongoose.Schema({
         trim:true,
         unique:true
     },
-    sectore:{
-        type:[Object]
-    }
+    sector:[{type:mongoose.Types.ObjectId,ref:'Direccion'}],
 },{
     timestamps:true
 })

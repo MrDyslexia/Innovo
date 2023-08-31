@@ -17,8 +17,9 @@ const direccionSchema=new mongoose.Schema({
         type:String,
         require:flase,
     },
-    idseccion:{
-        type:[Object],
+    idsector:{
+        type:mongoose.Types.ObjectId,
+        ref:'Sector',
         require:true,
     }
 },{

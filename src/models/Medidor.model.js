@@ -7,7 +7,8 @@ const medidorSchema=new mongoose.Schema({
         unique:true
     },
     idCliente:{
-        type:[Object],
+        type:mongoose.Types.ObjectId,
+        ref:'Cliente',
         require:false,
     }
 },{

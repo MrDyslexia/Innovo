@@ -11,7 +11,8 @@ const clienteSchema=new mongoose.Schema({
         require:true,
     },
     idMedidor:{
-        type:[Object],
+        type:mongoose.Types.ObjectId,
+        ref:'Medidor',
         require:true
     }
 },{
